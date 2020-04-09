@@ -1,0 +1,116 @@
+
+# linked list
+
+type Node
+  var int value := 0
+  var Node next := nil
+end
+
+type LinkedList
+  var Node first := nil
+  var int length := 0
+end
+
+fun LinkedList addNode(int value, LinkedList myList)
+  var newNode := new Node
+  set newNode.value := value
+  
+  if myList.length = 0 then
+    set myList.first := newNode
+  else
+    var tempNode := myList.first
+    var int index := 1
+    while index < myList.length do
+      set tempNode := tempNode.next
+      set index := index + 1
+    end
+    set tempNode.next := newNode
+  end
+  
+  set myList.length := myList.length + 1
+  return myList
+end
+
+var myList := new LinkedList
+set myList := addNode(1, myList)
+set myList := addNode(3, myList)
+
+print("Test 1: ")
+if myList.length = 2 then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+print("Test 2: ")
+if myList.first.value = 1 then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+print("Test 3: ")
+if myList.first.next.value = 3 then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+print("Test 4: ")
+if myList.first.next.next = nil then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+fun nil nilAddNode(int value, LinkedList myList)
+  var newNode := new Node
+  set newNode.value := value
+  
+  if myList.length = 0 then
+    set myList.first := newNode
+  else
+    var tempNode := myList.first
+    var int index := 1
+    while index < myList.length do
+      set tempNode := tempNode.next
+      set index := index + 1
+    end
+    set tempNode.next := newNode
+  end
+  
+  set myList.length := myList.length + 1
+  # return <- not needed
+end
+
+var myNewList := new LinkedList
+addNode(1, myNewList)
+addNode(3, myNewList)
+
+print("Test 5: ")
+if myNewList.length = 2 then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+print("Test 6: ")
+if myNewList.first.value = 1 then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+print("Test 7: ")
+if myNewList.first.next.value = 3 then
+  print("pass\n")
+else
+  print("fail\n")
+end
+
+print("Test 8: ")
+if myNewList.first.next.next = nil then
+  print("pass\n")
+else
+  print("fail\n")
+end

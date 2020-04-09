@@ -1,0 +1,28 @@
+type Rectangle
+  var length := 1
+  var width := 1
+end
+
+fun bool isSquare(Rectangle myRectangle)
+  return myRectangle.length = myRectangle.width
+end
+
+var plaid := new Rectangle
+set plaid.length := 3
+set plaid.width := 2
+
+if isSquare(plaid) then
+  print("Plaid is a square\n")
+else
+  print("Plaid is not a square\n")
+end
+
+var zebra := new Rectangle
+set plaid.length := 104
+set plaid.width := 104
+
+if isSquare(zebra) then
+  print("Zebra is a square\n")
+else
+  print("Zebra is not a square\n")
+end

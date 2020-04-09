@@ -1,0 +1,8 @@
+
+# checking with tabs
+
+if true then
+	print("It works!\n")
+else
+	print("The if statement is wonky but tab-deleting works!\n")
+end

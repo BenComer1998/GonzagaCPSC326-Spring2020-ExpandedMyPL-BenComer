@@ -1,0 +1,30 @@
+
+# Uh-oh, shadowing time!
+
+var int x := 2
+var int y := 4
+var int a := 55
+var int b := 65
+
+fun int add(int a, int b)
+  var int x := a + b
+  return x
+end
+
+print("Should be 6: ")
+print(itos(add(x, y)))
+print("\n")
+print("Should be 2: ")
+print(itos(x))
+print("\n")
+
+fun string conc(string a, string b)
+  return concat(a, b)
+end
+
+var string c := "rude "
+var string d := "buster"
+
+print("Should be rude buster: ")
+print(conc(c, d))
+print("\n")

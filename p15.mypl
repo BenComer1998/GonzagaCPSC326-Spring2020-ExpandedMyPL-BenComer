@@ -1,0 +1,5 @@
+if 3 > 4 then
+  print("Three is greater than four\n")
+else
+  print("Three is not greater than four\n")
+end
